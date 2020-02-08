@@ -13,7 +13,10 @@ public class Calculator {
 	 */
 	public double action(double a, double b) {
 		double result = 0;
-		if (a<b) {
+		if(b==0) {
+			throw new ArithmeticException("Second parameter can't be zero: " + b);
+		}
+		else if (a<b) {
 			result = a * b;
 		}else {
 			result = a/b;
